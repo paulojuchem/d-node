@@ -76,9 +76,14 @@ sockjs.on('connection', function(conn) {
     			if(actions[data.action])
 		    	{
 
-		    		//r = data; j = broadcast; k = action default current_action;
+		    		/*
+						@param1 = data
+						@param2 = callback
+						@param3 = usuario
+						@param4 = app
+		    		*/
 			        actions[data.action](data.data , function(r , k , j){
-
+			        	//r = data; j = broadcast; k = action default current_action;
 			        	if(j===true)
 			        	{
 
